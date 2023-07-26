@@ -1,40 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Brust</title>
-    <!-- tailwind & daisy ui cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- google font lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-    <!-- tailwind custom class -->
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fruit Brust</title>
+        
+        <!-- tailwind & daisy ui cdn -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- google font lato -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- fontawesome kit -->
+        <script src="https://kit.fontawesome.com/2b7989d015.js" crossorigin="anonymous"></script>
+
+        <!-- tailwind custom class -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            clifford: "#da373d",
+                            "color-primary": "#F85559",
+                        },
+                    },
+                },
+            };
+        </script>
+        <!-- custom style -->
+        <style>
+            .font-lato {
+                font-family: "Lato", sans-serif;
             }
-          }
-        }
-      </script>
-      <!-- custom style -->
-      <style>
-        .font-lato{
-            font-family: 'Lato', sans-serif;
-        }
-      </style>
-</head>
-<body class="font-lato">
-    <header class="container mx-auto">
-       <!-- menu area start -->
-        <nav class="my-5 lg:my-10">
-            <div class="flex navbar bg-base-100 lg:bg-[#F85559]">
+        </style>
+    </head>
+    <body class="font-lato">
+        <header class="container mx-auto">
+
+            <!-- menu area start -->
+
+        <nav class="my-2 lg:my-8">
+            <div class="flex items-center navbar bg-base-100 lg:bg-color-primary rounded-full">
                 <div class="navbar-start hidden text-white  lg:flex">
                     <ul class="menu menu-horizontal px-1 text-lg ">
                         <li><a>Home</a></li>
@@ -44,16 +60,17 @@
                       </ul>
                   </div>
     
-                  <!-- lg-device nav logo -->
-                <div class="navbar-center hidden lg:block ">
+                  <!-- lg-device nav items -->
+
+                <div class="navbar-center">
                     
-                    <div class=" flex items-center gap-4 ">
-                        <img src="./images/logo.png" alt="" class="w-10 h-10">
-                        <a href="#" class="text-white text-3xl font-semibold">
-                            <span class="text-white">Fruit Brust</span>
+                    <div class=" flex items-center justify-center gap-2 pl-4 lg:pl-0">
+                        <img src="./images/logo.png" alt="" class="w-9 h-9">
+                        <a href="#" class="text-white text-2xl font-semibold">
+                            <span class="text-black lg:text-white">Fruit Brust</span>
                         </a>
                     </div>
-                    <div class="dropdown dropdown-end">
+                    <div class="dropdown dropdown-end hidden lg:block">
                       <label tabindex="0" class="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                       </label>
@@ -65,10 +82,12 @@
                       </ul>
                     </div>
                 </div>
-                  <!-- sm-device nav logo -->
-                <div class="navbar lg:hidden ">
+                
+                  <!-- sm-device nav items -->
+
+                <div class="navbar lg:hidden">
                     <div class="flex-1">
-                        <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                        <a class="btn btn-ghost normal-case text-xl hidden lg:block">Fuirt Brust</a>
                       </div>
                     <div class="dropdown dropdown-end">
                       <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -82,19 +101,19 @@
                       </ul>
                     </div>
                 </div>
-                
-                <div class="navbar-end hidden lg:flex">
-                    <input type="text" placeholder="Search here" class="input input-bordered w-24 md:w-auto px-9" />
+
+                <!-- search here -->
+
+                <div class="navbar-end relative hidden lg:flex pr-2">
+                    <input type="text" placeholder="Search here" class="input input-bordered rounded-full w-24 md:w-auto px-16 "  />
+                    <button class="absolute right-8"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
               </div>
         </nav>
-        <!-- menu area end -->
-    </header>
-    <main>
         
-    </main>
-    <footer>
-
-    </footer>
-</body>
+        <!-- menu area end -->
+        </header>
+        <main></main>
+        <footer></footer>
+    </body>
 </html>
